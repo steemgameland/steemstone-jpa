@@ -11,7 +11,8 @@ import javax.persistence.Table;
 @Table(name="tb_notice")
 public class Notice {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "notice_id")
 //    @SerializedName(value = "notice_id")
 //    @Expose
