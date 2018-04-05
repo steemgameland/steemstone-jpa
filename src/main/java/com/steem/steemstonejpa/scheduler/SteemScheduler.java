@@ -19,33 +19,33 @@ public class SteemScheduler {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 	
-	@Scheduled(cron = "*/5 * * * * *")
+	@Scheduled(cron = "*/50 * * * * *")
 	public void chkVoter(){
-		logger.info("chkVoter start!!************************");
-		SteemOrder steemOrder = new SteemOrder();
-		steemOrder.addGold();
-		logger.info("chkVoter end!!************************");
+//		logger.info("chkVoter start!!************************");
+//		SteemOrder steemOrder = new SteemOrder();
+//		steemOrder.addGold();
+//		logger.info("chkVoter end!!************************");
 	}
 	
-	@Scheduled(cron = "*/10 * * * * *")
+	@Scheduled(cron = "*/50 * * * * *")
 	public void crtHumanPosting(){
-		logger.info("crtPosting start!!************************");
-		SteemOrder steemOrder = new SteemOrder();
-		steemOrder.gamePosting(Camp.HUMAN);
-		logger.info("crtPosting end!!************************");
+//		logger.info("crtPosting start!!************************");
+//		SteemOrder steemOrder = new SteemOrder();
+//		steemOrder.gamePosting(Camp.HUMAN);
+//		logger.info("crtPosting end!!************************");
 	}
 	
-	@Scheduled(cron = "*/20 * * * * *")
+	@Scheduled(cron = "*/50 * * * * *")
 	public void crtOrcPosting(){
-		logger.info("crtPosting start!!************************");
-		SteemOrder steemOrder = new SteemOrder();
-		steemOrder.gamePosting(Camp.ORC);
-		logger.info("crtPosting end!!************************");
+//		logger.info("crtPosting start!!************************");
+//		SteemOrder steemOrder = new SteemOrder();
+//		steemOrder.gamePosting(Camp.ORC);
+//		logger.info("crtPosting end!!************************");
 	}
 	
 	@Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
-        logger.info("The time is now {}", dateFormat.format(new Date()));
+//        logger.info("The time is now {}", dateFormat.format(new Date()));
     }
 }
 

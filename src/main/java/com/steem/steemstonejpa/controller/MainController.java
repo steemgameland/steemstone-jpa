@@ -38,11 +38,6 @@ public class MainController {
 	@Autowired
     private UnitRepository unitRepository;
 	
-	@RequestMapping("/unitinfo/{unit}")
-	public @ResponseBody Unit unitinfo(Model model, @PathVariable("unit") String unit){
-		return new Unit();
-	}
-	
 	@RequestMapping("/hello") 
     public String hello(Model model, 
     		@RequestParam(value="name", required=false, defaultValue="World") String name) {
@@ -59,23 +54,23 @@ public class MainController {
         noticeRepository.save(no);
         
         
-        List<Unit> unitlist = unitRepository.findAll();
-        System.out.println("unit List : " + unitlist);
-        Unit unit = new Unit();
-        unit.setAttackrange(1);
-        unit.setAttacktype("M");
-        unit.setBotytype("N");
-        unit.setKind("O");
-        unit.setLevel(1);
-        unit.setLife(1);
-        unit.setName("Grunt");
-        unit.setPower(1);
-        unit.setPrice(0.01f);
-        unit.setSpecial("");
-        unit.setSplash("N");
-        unitRepository.save(unit);
-        
-        list.add(no);
+//        List<Unit> unitlist = unitRepository.findAll();
+//        System.out.println("unit List : " + unitlist);
+//        Unit unit = new Unit();
+//        unit.setAttackrange(1);
+//        unit.setAttacktype("M");
+//        unit.setBotytype("N");
+//        unit.setKind("O");
+//        unit.setLevel(1);
+//        unit.setLife(1);
+//        unit.setName("Grunt");
+//        unit.setPower(1);
+//        unit.setPrice(0.01f);
+//        unit.setSpecial("");
+//        unit.setSplash("N");
+//        unitRepository.save(unit);
+//        
+//        list.add(no);
         try{
         	SteemJ steemApi = SteemApi.getInstance().getSteemJ();
             System.out.println(steemApi.getAccountCount());
